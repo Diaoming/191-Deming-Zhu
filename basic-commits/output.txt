@@ -1,0 +1,174 @@
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git status
+On branch master
+Your branch is ahead of 'origin/master' by 6 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git log
+commit 3834046d2e87990e1b55b57439c2b68452d6d81c (HEAD -> master)
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:37:02 2020 -0800
+
+    Create output.txt
+
+commit 7513dacb2e1cae26002f72340c38a2f6cc7b6ae7
+Merge: 566019e 6a071be
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:30:02 2020 -0800
+
+    Merge branch 'greeting'
+
+commit 566019ea3ea49f16b5ffa70943ee0ae065e4e28d
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:27:46 2020 -0800
+
+            modified:   README.md
+
+commit 6a071be86fcc4b91f4ced38ef240f47aa83c4423 (greeting)
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:24:10 2020 -0800
+
+    greeting
+
+commit a5080b60a7010c95ff85fdc5325fc4300ff8c1a1
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:18:43 2020 -0800
+
+    Add content to greeting.txt
+
+commit 6444721ea359f24fd8004fe7ffe0b010a613a5b7
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:18:29 2020 -0800
+
+    Add file greeting.txt
+
+commit b7c07029ec39ba686bf18c0f95f62a73a51118dc (origin/master, origin/HEAD)
+Author: Diaoming <1361977526@qq.com>
+Date:   Fri Jan 24 18:06:22 2020 -0800
+
+    Initial commit
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> Set-Content -Value "This is a file" -Path task2.txt                     PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git status
+On branch master
+Your branch is ahead of 'origin/master' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        task2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add .
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git status
+On branch master
+Your branch is ahead of 'origin/master' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   task2.txt
+
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git commit
+[master 1eec3db]        new file:   task2.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task2.txt
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git status
+On branch master
+Your branch is ahead of 'origin/master' by 7 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> Set-Content -Value "This is a file (modified)" -Path task2.txt
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git status
+On branch master
+Your branch is ahead of 'origin/master' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   task2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add .
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git status
+On branch master
+Your branch is ahead of 'origin/master' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   task2.txt
+
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> Set-Content -Value "This is a file (modified second time)" -Path task2.txt
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git status
+On branch master
+Your branch is ahead of 'origin/master' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   task2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   task2.txt
+
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git log
+commit 1eec3dbaeedc0ea52c7d0284b21186a2e582f3fb (HEAD -> master)
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:39:16 2020 -0800
+
+            new file:   task2.txt
+
+commit 3834046d2e87990e1b55b57439c2b68452d6d81c
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:37:02 2020 -0800
+
+    Create output.txt
+
+commit 7513dacb2e1cae26002f72340c38a2f6cc7b6ae7
+Merge: 566019e 6a071be
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:30:02 2020 -0800
+
+    Merge branch 'greeting'
+
+commit 566019ea3ea49f16b5ffa70943ee0ae065e4e28d
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:27:46 2020 -0800
+
+            modified:   README.md
+
+commit 6a071be86fcc4b91f4ced38ef240f47aa83c4423 (greeting)
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:24:10 2020 -0800
+
+    greeting
+
+commit a5080b60a7010c95ff85fdc5325fc4300ff8c1a1
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:18:43 2020 -0800
+
+    Add content to greeting.txt
+
+commit 6444721ea359f24fd8004fe7ffe0b010a613a5b7
+Author: Meowming <1361977526@qq.com>
+Date:   Fri Jan 24 18:18:29 2020 -0800
+
+    Add file greeting.txt
+
+commit b7c07029ec39ba686bf18c0f95f62a73a51118dc (origin/master, origin/HEAD)
+Author: Diaoming <1361977526@qq.com>
+Date:   Fri Jan 24 18:06:22 2020 -0800
+
+    Initial commit
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git commit                                                              [master 2f0746b]        modified:   task2.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu>
