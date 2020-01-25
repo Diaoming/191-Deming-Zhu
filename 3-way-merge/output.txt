@@ -1,0 +1,66 @@
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git branch greeting
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git checkout greeting
+Switched to branch 'greeting'
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add greeting.txt
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git commit
+On branch greeting
+nothing to commit, working tree clean
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add greeting.txt
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git rm greeting.txt
+rm 'greeting.txt'
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add greeting.txt
+fatal: pathspec 'greeting.txt' did not match any files
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add greeting.txt
+fatal: pathspec 'greeting.txt' did not match any files
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> Set-Content -Value "" -Path greeting.txt
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add greeting.txt
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git commit "greeting"
+error: pathspec 'greeting' did not match any file(s) known to git
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git commit -m "greeting"
+[greeting 6a071be] greeting
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git branch master
+fatal: A branch named 'master' already exists.
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git -b branch master
+unknown option: -b
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> Set-Content -Value "repo of inf191a - Deming" -Path README.md
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git add README.md
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git commit
+Aborting commit due to empty commit message.
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git commit
+[master 566019e]        modified:   README.md
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git log --oneline --graph --all
+* 566019e (HEAD -> master)      modified:   README.md
+| * 6a071be (greeting) greeting
+|/
+* a5080b6 Add content to greeting.txt
+* 6444721 Add file greeting.txt
+* b7c0702 (origin/master, origin/HEAD) Initial commit
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git diff master greeting                                                diff --git a/README.md b/README.md
+index 64a2392..f38e960 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1 @@
+-repo of inf191a - Deming
++# 191-Deming-Zhu
+\ No newline at end of file
+diff --git a/greeting.txt b/greeting.txt
+index ce01362..8b13789 100644
+--- a/greeting.txt
++++ b/greeting.txt
+@@ -1 +1 @@
+-hello
++
+PS D:\Workspace\Projects\Inf191\191-Deming-Zhu> git merge master greeting                                               Merge made by the 'recursive' strategy.
+ greeting.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
